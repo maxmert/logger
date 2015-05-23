@@ -1,0 +1,15 @@
+{
+  "name": "logup",
+  "version": "0.0.1",
+  "description": "Beautiful console log (using logdown) with placeholders",
+  "main": "index.js",
+  "author": "maxmert",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxmert/logup"
+  },
+  "dependencies": {
+    "logdown": "^1.1.2"
+  }
+}
