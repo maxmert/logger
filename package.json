@@ -1,6 +1,6 @@
 {
   "name": "logup",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Beautiful console log (using logdown) with placeholders",
   "main": "index.js",
   "author": "maxmert",
