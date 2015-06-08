@@ -5,6 +5,7 @@ var format  = require('util').format;
 
 var Logup = function(prefix) {
     this._logger = new Logdown({prefix: prefix || ''});
+    this.messages = [];
 };
 
 function values(args) {
@@ -17,16 +18,27 @@ function values(args) {
     return result;
 }
 
+function getMessage() {
+    var message = format.apply(null, values(arguments));
+    this.messages.push(message);
+
+    return message;
+}
+
+Logup.prototype.clear = function() {
+    this.messages = [];
+};
+
 Logup.prototype.info = function() {
-    return this._logger.info(format.apply(null, values(arguments)));
+    return this._logger.info(getMessage.apply(this, arguments));
 };
 
 Logup.prototype.error = function() {
-    return this._logger.error(format.apply(null, values(arguments)));
+    return this._logger.error(getMessage.apply(this, arguments));
 };
 
 Logup.prototype.log = function() {
-    return this._logger.log(format.apply(null, values(arguments)));
+    return this._logger.log(getMessage.apply(this, arguments));
 };
 
 module.exports = Logup;
