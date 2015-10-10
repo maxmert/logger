@@ -45,4 +45,13 @@ Logup.prototype.log = function() {
     return this._logger.log(getMessage.apply(this, arguments));
 };
 
+Logup.prototype.enable = function() {
+    return this._logger.enable.apply(this, arguments);
+};
+
+Logup.prototype.disable = function() {
+    return this._logger.disable.apply(this, arguments);
+};
+
+
 module.exports = Logup;
