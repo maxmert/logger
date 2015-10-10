@@ -17,3 +17,15 @@ logup.log('API `%s` is *%s*', 'authapi', 'mocked');
 ```
 
 ![](https://github.com/maxmert/logup/blob/master/screenshot.png)
+
+
+You can use methods:
+```js
+var Logup = require('logup');
+var logup = new Logup('server');
+
+logup.log('started at port *%s* in *%s* mode', 3000, development);
+logup.warn('API `%s` is *%s*', 'uapi', 'mocked');
+logup.info('API `%s` is *%s*', 'uapi', 'real');
+logup.error('API `%s` is *%s*', 'authapi', 'mocked');
+```

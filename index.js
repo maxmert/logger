@@ -33,6 +33,10 @@ Logup.prototype.info = function() {
     return this._logger.info(getMessage.apply(this, arguments));
 };
 
+Logup.prototype.warn = function() {
+    return this._logger.warn(getMessage.apply(this, arguments));
+};
+
 Logup.prototype.error = function() {
     return this._logger.error(getMessage.apply(this, arguments));
 };
